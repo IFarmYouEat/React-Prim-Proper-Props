@@ -14,7 +14,7 @@ function GuestList (props) {
                 </thead>
                 <tbody>
                 {props.guestList.map(guest => (
-                    <GuestItem guest={guest} />
+                    <GuestItem guest={guest} getGuests={props.getGuests} />
                 ))}
                 </tbody>
             </table>
