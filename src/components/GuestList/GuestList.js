@@ -1,4 +1,7 @@
+import GuestItem from '../GuestItem/GuestItem.js';
+
 function GuestList (props) {
+
     return (
         <div>
             <h2>Guest List</h2>
@@ -11,10 +14,7 @@ function GuestList (props) {
                 </thead>
                 <tbody>
                 {props.guestList.map(guest => (
-                    <tr key={guest.id}>
-                    <td>{guest.name}</td>
-                    <td>{String(guest.kidsMeal)}</td>
-                    </tr>
+                    <GuestItem guest={guest} />
                 ))}
                 </tbody>
             </table>
